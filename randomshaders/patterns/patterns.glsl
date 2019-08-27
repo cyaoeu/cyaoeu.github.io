@@ -90,7 +90,7 @@ void main(void){
 
     // Modern metric brick of 215mm x 102.5mm x 65mm
     // http://www.jaharrison.me.uk/Brickwork/Sizes.html
-    st /= vec2(16.)/9.;
+    //st /= vec2(2.15,0.65)/1.5;
 
     // Apply the brick tiling
     st = brickTile(st,10.0*(1.*sin(u_time)));
