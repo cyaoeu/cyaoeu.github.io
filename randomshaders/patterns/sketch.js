@@ -9,7 +9,7 @@ function preload() {
     // loadShader() is asynchronous so it needs to be in preload
     // loadShader() first takes the filename of a vertex shader, and then a frag shader
     // these file types are usually .vert and .frag, but you can actually use anything. .glsl is another common one
-    simpleshader = loadShader('patterns.vert', 'patterns.glsl');
+    simpleShader = loadShader('patterns.vert', 'patterns.glsl');
 }
 
 function setup() {
