@@ -1,5 +1,6 @@
 //this variable will hold our shader object
 let simpleShader;
+let clicked = false;
 
 function preload() {
     // a shader is composed of two parts, a vertex shader, and a fragment shader
@@ -26,7 +27,7 @@ function draw() {
     simpleShader.setUniform("u_resolution", [width, height]);
     simpleShader.setUniform("u_time", millis() / 1000.0); // we divide millis by 1000 to convert it to seconds
     simpleShader.setUniform("u_mouse", [mouseX, map(mouseY, 0, height, height, 0)]); // we flip Y so it's oriented properly in our shader
-    if (showUVs === true) {
+    if (clicked === true) {
         simpleShader.setUniform('clicked', 1.0);
     } else {
         simpleShader.setUniform('clicked', 0.0);
