@@ -95,10 +95,11 @@ void main(void){
     // Apply the brick tiling
     st = brickTile(st,10.0*(1.*sin(u_time)));
 
-    color = vec3(box(st,vec2(0.9)));
-
+    //color = vec3(box(st,vec2(0.9)));
+    //color = vec3(st,0.0);
+    float clicked = 0.;
+    color = mix(vec3(box(st,vec2(0.9))), vec3(st,0.0), clicked);
     // Uncomment to see the space coordinates
-    // color = vec3(st,0.0);
 
     gl_FragColor = vec4(color,1.0);
 }
