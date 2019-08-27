@@ -1,6 +1,6 @@
 //this variable will hold our shader object
 let simpleShader;
-let clicked = false;
+var clicked = false;
 
 function preload() {
     // a shader is composed of two parts, a vertex shader, and a fragment shader
