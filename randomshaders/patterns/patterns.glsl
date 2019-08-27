@@ -61,6 +61,7 @@ precision mediump float;
 
 uniform vec2 u_resolution;
 uniform float u_time;
+uniform float clicked;
 
 vec2 brickTile(vec2 _st, float _zoom){
     _st *= _zoom;
@@ -97,7 +98,6 @@ void main(void){
 
     //color = vec3(box(st,vec2(0.9)));
     //color = vec3(st,0.0);
-    float clicked = 0.;
     color = mix(vec3(box(st,vec2(0.9))), vec3(st,0.0), clicked);
     // Uncomment to see the space coordinates
 
