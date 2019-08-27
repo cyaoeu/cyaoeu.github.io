@@ -94,8 +94,7 @@ void main(void){
     //st /= vec2(2.15,0.65)/1.5;
 
     // Apply the brick tiling
-    st = brickTile(st,10.0*(1.*abs(sin(u_time))));
-
+    st = brickTile(st,10.0*abs((1.*sin(u_time))));
     //color = vec3(box(st,vec2(0.9)));
     //color = vec3(st,0.0);
     color = mix(vec3(box(st,vec2(0.9))), vec3(st,0.0), clicked);
