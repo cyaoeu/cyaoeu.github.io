@@ -6,7 +6,7 @@ precision mediump float;
 
 uniform vec2 u_resolution;
 uniform vec2 u_mouse;
-uniform float time;
+uniform float u_time;
 
 float random(in vec2 _st){
     return fract(sin(dot(_st.xy,
@@ -29,8 +29,8 @@ vec2 truchetPattern(in vec2 _st,in float _index){
 void main(){
     vec2 st=gl_FragCoord.xy/u_resolution.xy;
     st*=10.;
-    st=(st-vec2(5.))*(abs(sin(time*.1))*4.);
-    // st.x += time*3.0;
+    st=(st-vec2(5.))*(abs(sin(u_time*.1))*4.);
+    // st.x += u_time*3.0;
     
     vec2 ipos=floor(st);// integer
     vec2 fpos=fract(st);// fraction
